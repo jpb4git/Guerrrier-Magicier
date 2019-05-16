@@ -1,15 +1,42 @@
 import java.awt.*;
 
 public class Guerrier extends Entity{
-
-    private int minHealth = 5;
-    private int maxHealth = 10;
-    private int minStrength = 5;
-    private int maxStrength = 10;
-
+    /**
+     *
+     */
     private Arme arme;
+    /**
+     *
+     */
     private String bouclier;
 
+
+    /**
+     * Constructor
+     */
+    public Guerrier(){
+        super();
+    }
+
+    /**
+     * overload Constructor
+     * @param name
+     */
+    public Guerrier(String name){
+        super();
+    }
+
+    /**
+     * overload Constructor
+     * @param name
+     * @param minHealth
+     * @param maxHealth
+     * @param minStrength
+     * @param maxStrength
+     */
+    public Guerrier(String name,int minHealth,int maxHealth,int minStrength,int maxStrength){
+        super(name,minHealth,maxHealth,minStrength,maxStrength);
+    }
 
 
 
