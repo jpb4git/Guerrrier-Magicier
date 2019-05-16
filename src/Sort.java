@@ -1,2 +1,5 @@
-public class Sort {
+public class Sort extends Obj{
+
+
+
 }

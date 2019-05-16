@@ -1,2 +1,10 @@
-public class Arme {
+public class Arme extends Obj{
+
+
+    public Arme(String name,int strength){
+        super(name,strength);
+    }
+
+
+
 }
