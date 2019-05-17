@@ -1,9 +1,8 @@
 
 
-public class Sort extends Obj{
+class Sort extends Obj{
 
-    public Sort(String name,int strength){
-
+    Sort(String name, int strength){
         super(name,strength);
     }
 

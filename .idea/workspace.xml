@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e585665-dcd8-43a9-a156-9d68490a65a2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Arme.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GuerrierMagicien/Arme.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GuerrierMagicien/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Game$TypeHero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GuerrierMagicien/Game$TypeHero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GuerrierMagicien/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Guerrier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GuerrierMagicien/Guerrier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Magicien.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GuerrierMagicien/Magicien.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GuerrierMagicien/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Obj.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GuerrierMagicien/Obj.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Sort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GuerrierMagicien/Sort.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Arme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arme.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Guerrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Guerrier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Magicien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Magicien.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Obj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Obj.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sort.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,64 +34,47 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+            <state relative-caret-position="352">
+              <caret line="85" column="147" selection-start-line="85" selection-start-column="147" selection-end-line="85" selection-end-column="147" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#TypeHero#0;class#Game#0" />
+                <element signature="method#TypeHero#0;class#TypeHero#0;class#Game#0" />
+                <element signature="method#initSort#0;class#Game#0" />
+                <element signature="method#playGame#0;class#Game#0" />
+                <element signature="docComment;method#createEntity#0;class#Game#0" />
+                <element signature="method#createWeapon#0;class#Game#0" />
+                <element signature="method#createSort#0;class#Game#0" />
+                <element signature="n#!!doc;n#getArmes#0;n#Game#0" />
+                <element signature="e#5843#5844#0" expanded="true" />
+                <element signature="e#5871#5872#0" expanded="true" />
+                <element signature="e#5904#5905#0" expanded="true" />
+                <element signature="e#5932#5933#0" expanded="true" />
+                <element signature="method#clearScreen#0;class#Game#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity.java">
+        <entry file="file://$PROJECT_DIR$/src/Guerrier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="e#839#840#0" expanded="true" />
-                <element signature="e#865#866#0" expanded="true" />
-                <element signature="e#895#896#0" expanded="true" />
-                <element signature="e#924#925#0" expanded="true" />
-                <element signature="e#956#957#0" expanded="true" />
-                <element signature="e#987#988#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="228">
+              <caret line="60" column="10" lean-forward="true" selection-start-line="56" selection-start-column="4" selection-end-line="60" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Guerrier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-              <folding>
-                <element signature="e#157#158#0" expanded="true" />
-                <element signature="e#180#181#0" expanded="true" />
-                <element signature="e#234#235#0" expanded="true" />
-                <element signature="e#257#258#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Magicien.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="264">
+              <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+              <folding>
+                <element signature="method#showInfo#0;class#Magicien#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,17 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Arme.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="5" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="6" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Obj.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="66">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -106,8 +91,42 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state>
+              <folding>
+                <element signature="e#62#63#0" expanded="true" />
+                <element signature="e#98#99#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Obj.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+              <folding>
+                <element signature="method#generateHealth#0;class#Entity#0" />
+                <element signature="method#generateStrength#0;class#Entity#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -129,20 +148,20 @@
       <list>
         <option value="$PROJECT_DIR$/src/obj.java" />
         <option value="$PROJECT_DIR$/src/Obj.java" />
-        <option value="$PROJECT_DIR$/src/Arme.java" />
         <option value="$PROJECT_DIR$/src/Sort.java" />
-        <option value="$PROJECT_DIR$/src/Magicien.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
+        <option value="$PROJECT_DIR$/src/Arme.java" />
         <option value="$PROJECT_DIR$/src/Entity.java" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/Guerrier.java" />
+        <option value="$PROJECT_DIR$/src/Magicien.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="27" />
+    <option name="x" value="1920" />
     <option name="width" value="1920" />
-    <option name="height" value="994" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -150,6 +169,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,11 +177,33 @@
               <item name="Guerrrier-Magicier" type="b2602c69:ProjectViewProjectNode" />
               <item name="Guerrrier-Magicier" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Guerrrier-Magicier" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Guerrrier-Magicier" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Guerrrier-Magicier" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Guerrrier-Magicier" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Guerrrier-Magicier" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Guerrrier-Magicier" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="GuerrierMagicien" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Guerrrier-Magicier" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Guerrrier-Magicier" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -212,10 +254,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="994" extended-state="6" />
+    <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10245464" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2275641" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -224,15 +266,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32871974" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46008402" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39907727" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32948583" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.22268908" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3621684" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.36134455" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -244,83 +286,92 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Obj.java">
+    <entry file="jrt:///home/jip/Apps/JAVA/idea-IC-191.6183.87/jre64!/java.base/java/util/function/Consumer.class" />
+    <entry file="jrt:///home/jpb/Apps/idea-IC-191.6183.87/jre64!/java.base/java/util/ArrayList.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="-2024">
+          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Arme.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="5" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="66">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state>
+          <folding>
+            <element signature="e#62#63#0" expanded="true" />
+            <element signature="e#98#99#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Magicien.java">
+    <entry file="file://$PROJECT_DIR$/src/Obj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jrt:///home/jip/Apps/JAVA/idea-IC-191.6183.87/jre64!/java.base/java/util/function/Consumer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="286">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
           <folding>
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#865#866#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
-            <element signature="e#987#988#0" expanded="true" />
+            <element signature="method#generateHealth#0;class#Entity#0" />
+            <element signature="method#generateStrength#0;class#Entity#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        <state relative-caret-position="352">
+          <caret line="85" column="147" selection-start-line="85" selection-start-column="147" selection-end-line="85" selection-end-column="147" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#TypeHero#0;class#Game#0" />
+            <element signature="method#TypeHero#0;class#TypeHero#0;class#Game#0" />
+            <element signature="method#initSort#0;class#Game#0" />
+            <element signature="method#playGame#0;class#Game#0" />
+            <element signature="docComment;method#createEntity#0;class#Game#0" />
+            <element signature="method#createWeapon#0;class#Game#0" />
+            <element signature="method#createSort#0;class#Game#0" />
+            <element signature="n#!!doc;n#getArmes#0;n#Game#0" />
+            <element signature="e#5843#5844#0" expanded="true" />
+            <element signature="e#5871#5872#0" expanded="true" />
+            <element signature="e#5904#5905#0" expanded="true" />
+            <element signature="e#5932#5933#0" expanded="true" />
+            <element signature="method#clearScreen#0;class#Game#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Guerrier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        <state relative-caret-position="228">
+          <caret line="60" column="10" lean-forward="true" selection-start-line="56" selection-start-column="4" selection-end-line="60" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Magicien.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
           <folding>
-            <element signature="e#157#158#0" expanded="true" />
-            <element signature="e#180#181#0" expanded="true" />
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
+            <element signature="method#showInfo#0;class#Magicien#0" />
           </folding>
         </state>
       </provider>
