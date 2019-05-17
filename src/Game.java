@@ -7,42 +7,19 @@ class Game {
 
     // liste des Entitys
     private List<Entity> entity  = new ArrayList<>();
-    // listes des armes dispo
-    private List<Obj> Armes = new ArrayList<>();
+
+
+
     // liste des sorts Dispo
     private List<Obj> Sorts = new ArrayList<>();
-    /**
-     * enumeration des types  personnages
-     */
-    private enum TypeHero{
-        GUERRIER (5,10,5,10),
-        MAGICIEN (3,6,8,15);
 
-        TypeHero(int minH,int maxH,int minS,int maxS) {
-            this.minHealth   = minH;
-            this.maxHealth   = maxH;
-            this.minStrength = minS;
-            this.maxStrength = maxS;
-        }
 
-        private final int minHealth;
-        private final int maxHealth;
-        private final int minStrength;
-        private final int maxStrength;
 
-    }
-    private List<Obj>  initWeapon(){
-        List<Obj> armes = new ArrayList<>();
-        armes.add(createWeapon("Hache en Bronze",2));
-        armes.add(createWeapon("Hache en fer",3));
-        armes.add(createWeapon("Hache en bismut",4));
-        return armes;
-    }
     private List<Obj>  initSort(){
         List<Obj> sort = new ArrayList<>();
-        sort.add(createSort("Luminix",2));
-        sort.add(createSort("Freeze",3));
-        sort.add(createSort("FireBall",4));
+        sort.add(createSort("frail FireBall",3));
+        sort.add(createSort("weak FireBall",3));
+        sort.add(createSort("feeble FireBall" ,3));
         return sort;
     }
 
@@ -89,7 +66,7 @@ class Game {
     }
 
     private void init(Game game){
-        game.Armes = game.initWeapon();
+
         game.Sorts = game.initSort();
         // Temporaire
         //game.printObj(game.Armes);
@@ -101,40 +78,43 @@ class Game {
             hero.showInfo();
         }
     }
+
     private void AddEntity(Game game){
-        Entity NewEntity = game.createEntity(game.Armes.get(0),game.Sorts.get(0));
+        Entity NewEntity = game.createEntity();
         this.entity.add(NewEntity);
     }
+
     private void editEntity(Game game){
         int i = 0;
         String str;
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Editer : ");
+        System.out.println("__________");
+        System.out.println("EDITION   ");
+        System.out.println("__________");
+
         for (Entity hero: game.entity) {
            System.out.print( hero.getNom() + " Tapez " + i + "  |  ");
            i++;
         }
-        System.out.println("Quittez le mode edition :: q ");
+        System.out.println("Quittez le mode édition :: q ");
         str = sc.nextLine();
 
-        while (str.equals("q")){
+        while (!str.equals("q")){
             Game.clearScreen();
 
             // formulaire edition avec index
-            game.entity.get(i).editEntity();
+            game.entity.get(Integer.parseInt(str)).editEntity();
 
 
-
+            i = 0;
             System.out.println("Editer : ");
             for (Entity hero: game.entity) {
                 System.out.print( hero.getNom() + " Tapez " + i + "  |  ");
                 i++;
             }
-            System.out.println("Quittez le mode edition :: q ");
+            System.out.println("Quittez le mode édition :: q ");
             str = sc.nextLine();
-
-
 
         }
 
@@ -144,35 +124,34 @@ class Game {
     /**
      * création de l'entity
      */
-   private Entity createEntity(Obj arme,Obj sort){
+   private Entity createEntity(){
        String name;
-       TypeHero type;
+       TypeEntity type;
        Scanner sc = new Scanner(System.in);
        System.out.println("Bienvenue dans Game choisissez un Nom pour votre personnage  : " );
        name = sc.nextLine();
-       System.out.println(" L'archétype  de votre personnage :: 1 pour " + TypeHero.GUERRIER + "  |  2 pour  " + TypeHero.MAGICIEN + " ? :");
+       System.out.println(" L'archétype  de votre personnage :: 1 pour " + TypeEntity.GUERRIER + "  |  2 pour  " + TypeEntity.MAGICIEN + " ? :");
        String str = sc.nextLine();
        if (Integer.parseInt(str) == 1 ){
-            System.out.println("Vous avez choisi : " + TypeHero.GUERRIER);
-            type = TypeHero.GUERRIER;
+            System.out.println("Vous avez choisi : " + TypeEntity.GUERRIER);
+            type = TypeEntity.GUERRIER;
             Guerrier guerrier = new Guerrier(name ,type.minHealth,type.maxHealth,type.minStrength,type.maxStrength);
-            guerrier.setDeffense("Bouclier En Bois");
-            System.out.println(arme.getStrength());
-            guerrier.setOffense(arme);
+            System.out.println(guerrier.getStrength());
             return guerrier;
        }else{
-            System.out.println("Vous avez choisi : " + TypeHero.MAGICIEN.toString());
-            type = TypeHero.MAGICIEN;
-            Magicien magicien  = new Magicien(name ,type.minHealth,type.maxHealth,type.minStrength,type.maxStrength);
-            magicien.setOffense(sort);
-            magicien.setDeffense("vigor");
-            return  magicien;
+            System.out.println("Vous avez choisi : " + TypeEntity.MAGICIEN.toString());
+            type = TypeEntity.MAGICIEN;
+            return  new Magicien(name ,type.minHealth,type.maxHealth,type.minStrength,type.maxStrength);
+            //magicien.setOffense(sort);
+            //magicien.setDeffense("vigor");
+            //return  magicien;
        }
    }
    private Arme createWeapon(String name,int Strength ){
 
         return new Arme(name,Strength);
     }
+
    private Sort createSort(String name,int Strength ){
 
         return new Sort(name,Strength);
@@ -192,12 +171,13 @@ class Game {
 
     }
     */
-   public List<Obj> getArmes() {
-        return Armes;
-    }
-   public List<Obj> getSorts() {
-        return Sorts;
-    }
+
+   int randomObj(int min, int max){
+       return min + (int)(Math.random() * ((max - min) + 1));
+   }
+
+
+
    private static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();

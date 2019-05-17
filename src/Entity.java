@@ -1,5 +1,4 @@
-
-
+import java.util.List;
 
 abstract class Entity {
 
@@ -18,18 +17,13 @@ abstract class Entity {
     Entity(String nom, int minHealth, int maxHealth, int minStrength, int maxStrength){
         Nom = nom;
         // Image = img;
-        Health = generateHealth(minHealth,maxHealth);
-        Strength = generateStrength(minStrength,maxStrength);
+        Health = generateRandom(minHealth,maxHealth);
+        Strength = generateRandom(minStrength,maxStrength);
     }
 
-
-    private int generateHealth(int minHealth,int maxHealth){
-        return minHealth + (int)(Math.random() * ((maxHealth - minHealth) + 1));
-    }
-
-    private int generateStrength(int minStrength,int maxStrength){
-                    //4    +   (int)(0.0 <> 1.0       *      ((12 - 4 )              + 1))
-        return minStrength + (int)(Math.random() * ((maxStrength - minStrength) + 1));
+    protected int generateRandom(int min,int max){
+        //4    +   (int)(0.0 <> 1.0       *      ((12 - 4 )              + 1))
+        return min + (int)(Math.random() * ((max - min) + 1));
     }
 
     /**
@@ -47,6 +41,19 @@ abstract class Entity {
     int getStrength() {
         return Strength;
     }
+
+    protected void setNom(String nom) {
+        Nom = nom;
+    }
+
+    protected void setHealth(int health) {
+        Health = health;
+    }
+
+    protected void setStrength(int strength) {
+        Strength = strength;
+    }
+
 
     abstract void showInfo();
 

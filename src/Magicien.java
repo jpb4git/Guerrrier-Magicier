@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.List;
 
 public class Magicien extends Entity{
 
