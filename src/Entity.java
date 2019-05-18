@@ -21,15 +21,11 @@ abstract class Entity {
         Strength = generateRandom(minStrength,maxStrength);
     }
 
-    protected int generateRandom(int min,int max){
+    int generateRandom(int min, int max){
         //4    +   (int)(0.0 <> 1.0       *      ((12 - 4 )              + 1))
         return min + (int)(Math.random() * ((max - min) + 1));
     }
 
-    /**
-     *
-
-     */
     String getNom() {
         return Nom;
     }
@@ -42,18 +38,17 @@ abstract class Entity {
         return Strength;
     }
 
-    protected void setNom(String nom) {
+    void setNom(String nom) {
         Nom = nom;
     }
 
-    protected void setHealth(int health) {
+    void setHealth(int health) {
         Health = health;
     }
 
-    protected void setStrength(int strength) {
+    void setStrength(int strength) {
         Strength = strength;
     }
-
 
     abstract void showInfo();
 
