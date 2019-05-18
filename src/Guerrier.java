@@ -23,7 +23,6 @@ public class Guerrier extends Entity{
     public Guerrier(){
         super();
     }
-
     /**
      * overload Constructor
      *
@@ -32,12 +31,21 @@ public class Guerrier extends Entity{
         super();
     }
 
-
+    /**
+     * construct and initializes a Guerrier with a name, health and strength
+     *
+     *
+     * @param name name String format
+     * @param minHealth minimum health a Guerrier can have
+     * @param maxHealth maximum health a Guerrier can have
+     * @param minStrength minimum strenth a guerier can have
+     * @param maxStrength maximum strenth a guerier can have
+     */
     Guerrier(String name, int minHealth, int maxHealth, int minStrength, int maxStrength){
         super(name,minHealth,maxHealth,minStrength,maxStrength);
         this.Armes =  createListWeapon();
         this.setOffense();
-        this.setDeffense("Bouclier En Bois");
+        this.setDefense("Bouclier En Bois");
     }
 
     private List<Obj>  createListWeapon(){
@@ -48,22 +56,21 @@ public class Guerrier extends Entity{
         return armes;
     }
 
-    void setOffense(){
+    private void setOffense(){
         this.arme = this.Armes.get(generateRandom(0,this.Armes.size()-1));
     }
-    void setDeffense(String bouclier){
+
+    private void setDefense(String bouclier){
         this.bouclier = bouclier;
     }
 
-    protected void setBouclier(String bouclier) {
+    private void setBouclier(String bouclier) {
         this.bouclier = bouclier;
     }
 
-    protected void setArme(Obj arme){
+    private void setArme(Obj arme){
         this.arme = arme;
     }
-
-
 
     public void showInfo(){
         System.out.println("____________________________");

@@ -9,8 +9,6 @@ class Obj {
         this.Strength = Strength;
     }
 
-
-
     /**
      *
      */
