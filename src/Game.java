@@ -8,7 +8,7 @@ class Game {
     // liste des Entitys
     List<Entity> entities = new ArrayList<>();
     /**
-     * Entry point   : method static  playGame
+     * method static  playGame
      */
     static void playGame(){
         Game game = new Game();
@@ -55,6 +55,7 @@ class Game {
             hero.showInfo();
         }
     }
+
     private void AddEntity(Game game){
         Entity NewEntity = game.createEntity();
         this.entities.add(NewEntity);
