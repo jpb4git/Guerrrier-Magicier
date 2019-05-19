@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e585665-dcd8-43a9-a156-9d68490a65a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Arme.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Entity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Guerrier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Magicien.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Obj.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/Sort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GuerrierMagicien/TypeEntity.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,6 +14,10 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -39,22 +33,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+            <state relative-caret-position="253">
+              <caret line="21" column="120" selection-start-line="21" selection-start-column="120" selection-end-line="21" selection-end-column="120" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;method#playGame#0;class#Game#0" />
+                <element signature="method#playGame#0;class#Game#0" />
+                <element signature="method#listeEntity#0;class#Game#0" />
+                <element signature="e#3412#3452#1" />
                 <element signature="method#AddEntity#0;class#Game#0" />
                 <element signature="method#createEntity#0;class#Game#0" />
+                <element signature="e#2889#3141#1" />
+                <element signature="method#editEntity#0;class#Game#0" />
+                <element signature="e#3828#3926#1" />
+                <element signature="e#4265#4377#1" />
+                <element signature="method#deleteEntity#0;class#Game#0" />
+                <element signature="e#4444#4542#1" />
+                <element signature="e#4920#5032#1" />
+                <element signature="method#clearScreen#0;class#Game#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="23" lean-forward="true" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -62,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state>
+              <caret column="8" selection-start-column="8" selection-end-column="8" />
               <folding>
                 <element signature="method#Entity#1;class#Entity#0" />
                 <element signature="method#generateStrength#1;class#Entity#0" />
@@ -181,12 +178,12 @@
         <option value="$PROJECT_DIR$/src/Magicien.java" />
         <option value="$PROJECT_DIR$/src/Obj.java" />
         <option value="$PROJECT_DIR$/src/Entity.java" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="27" />
     <option name="width" value="1920" />
     <option name="height" value="994" />
@@ -216,6 +213,11 @@
               <item name="out" type="462c0819:PsiDirectoryNode" />
               <item name="production" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Guerrrier-Magicier" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Guerrrier-Magicier" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -226,6 +228,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -271,10 +274,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="899" extended-state="7" />
+    <frame x="0" y="27" width="1920" height="899" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8625678" visible="true" weight="0.16755603" />
-      <window_info id="Structure" order="1" sideWeight="0.13743219" side_tool="true" visible="true" weight="0.16755603" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.86206895" visible="true" weight="0.16755603" />
+      <window_info id="Structure" order="1" sideWeight="0.13793103" side_tool="true" visible="true" weight="0.16755603" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -282,15 +285,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.1515544" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28626943" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39907727" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.28367877" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.12176166" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.361015" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.36010364" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -347,17 +350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="method#Entity#1;class#Entity#0" />
-            <element signature="method#generateStrength#1;class#Entity#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Guerrier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-629">
@@ -381,13 +373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TypeEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -402,14 +387,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+          <folding>
+            <element signature="method#Entity#1;class#Entity#0" />
+            <element signature="method#generateStrength#1;class#Entity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+        <state relative-caret-position="253">
+          <caret line="21" column="120" selection-start-line="21" selection-start-column="120" selection-end-line="21" selection-end-column="120" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;method#playGame#0;class#Game#0" />
+            <element signature="method#playGame#0;class#Game#0" />
+            <element signature="method#listeEntity#0;class#Game#0" />
+            <element signature="e#3412#3452#1" />
             <element signature="method#AddEntity#0;class#Game#0" />
             <element signature="method#createEntity#0;class#Game#0" />
+            <element signature="e#2889#3141#1" />
+            <element signature="method#editEntity#0;class#Game#0" />
+            <element signature="e#3828#3926#1" />
+            <element signature="e#4265#4377#1" />
+            <element signature="method#deleteEntity#0;class#Game#0" />
+            <element signature="e#4444#4542#1" />
+            <element signature="e#4920#5032#1" />
+            <element signature="method#clearScreen#0;class#Game#0" />
           </folding>
         </state>
       </provider>
