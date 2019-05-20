@@ -55,7 +55,6 @@ class Game {
             hero.showInfo();
         }
     }
-
     private void AddEntity(Game game){
         Entity NewEntity = game.createEntity();
         this.entities.add(NewEntity);

@@ -111,3 +111,4 @@ public class Magicien extends Entity{
 
     }
 }
+
