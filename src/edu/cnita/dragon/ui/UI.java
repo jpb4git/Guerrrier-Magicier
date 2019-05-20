@@ -8,7 +8,7 @@ public interface UI {
     void listeEntity();
     Entity createEntity();
     void editEntity();
-    void FormulaireEntity(Entity entity);
+    void formulaireEntity(Entity entity);
     void deleteEntity();
     void AddEntity();
 }

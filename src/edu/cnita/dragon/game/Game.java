@@ -9,14 +9,11 @@ public class Game {
     Console console;
     List<Entity> entities;
 
-    // Getters
-    public List<Entity> getEntities() {
-        return entities;
-    }
+
     /**  Constructor  */
     public Game (){
-         entities = new ArrayList<>();
-         console = new Console(this);
+         this.entities = new ArrayList<>();
+         this.console = new Console(this);
     }
 
     /**
@@ -25,5 +22,9 @@ public class Game {
     public static void playGame(){
         Game game = new Game();
         game.console.showMenu();
+    }
+    // Getters
+    public List<Entity> getEntities() {
+        return entities;
     }
 }

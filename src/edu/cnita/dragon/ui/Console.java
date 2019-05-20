@@ -48,6 +48,7 @@ public class Console implements UI{
             System.out.println("_______________________________________________________________________________________________________________" );
             str = sc.nextLine();
         }
+        sc.close();// memory ....
     }
     public void listeEntity(){
 
@@ -75,7 +76,7 @@ public class Console implements UI{
         String str = sc.nextLine();
 
         if (Integer.parseInt(str) == 1 ){
-            System.out.println("Vous avez choisi : " + TypeEntity.GUERRIER);
+            System.out.println("Vous avez choisi : " + TypeEntity.GUERRIER.toString());
 
 
             return new Guerrier(name ,TypeEntity.GUERRIER.minHealth,
@@ -83,6 +84,7 @@ public class Console implements UI{
                                       TypeEntity.GUERRIER.minStrength,
                                       TypeEntity.GUERRIER.maxStrength,
                                       TypeEntity.GUERRIER);
+
         }else{
             System.out.println("Vous avez choisi : " + TypeEntity.MAGICIEN);
             return  new Magicien(name ,TypeEntity.MAGICIEN.minHealth,TypeEntity.MAGICIEN.maxHealth,TypeEntity.MAGICIEN.minStrength,TypeEntity.MAGICIEN.maxStrength,TypeEntity.MAGICIEN);
@@ -108,7 +110,7 @@ public class Console implements UI{
             clearScreen();
 
             // formulaire edition avec index
-            this.FormulaireEntity(this.game.getEntities().get(Integer.parseInt(str)));
+            formulaireEntity(this.game.getEntities().get(Integer.parseInt(str)));
 
 
             i = 0;
@@ -126,11 +128,11 @@ public class Console implements UI{
 
 
     }
-    public void FormulaireEntity(Entity entity){
+    public void formulaireEntity(Entity entity){
 
         Scanner sc = new Scanner(System.in);
         String str;
-        TypeEntity type =  entity.getType();
+       // TypeEntity type =  entity.getType();
 
         System.out.println(entity.getNom() + " | Health:" + entity.getHealth()+ " | Strength:" + entity.getStrength()+ " | Defense :" + entity.getDefense() + " | Offense :"+ entity.getOffense().getNom());
         System.out.println("EDITION ][ Nom Entity  : " );
@@ -149,20 +151,20 @@ public class Console implements UI{
         System.out.println("EDITION ][ Relancer les dés de vie ?  y/n  : " );
         str = sc.nextLine();
         if (str.equals("y")){
-             entity.setHealth(entity.generateRandom(type.minHealth,type.maxHealth));
+             entity.setHealth(entity.generateRandom(entity.getType().minHealth,entity.getType().maxHealth));
         }
 
         System.out.println("EDITION ][ Relancer les dés de puissance ?  y/n  : " );
         str = sc.nextLine();
         if (str.equals("y")){
-             entity.setStrength(entity.generateRandom(type.minStrength,type.maxStrength));
+             entity.setStrength(entity.generateRandom(entity.getType().minStrength,entity.getType().maxStrength));
         }
 
         System.out.println("EDITION ][ Relancer les dés pour l'arme ?  y/n  : " );
         str = sc.nextLine();
         if (str.equals("y")){
             //souhait
-            entity.setOffense();
+            entity.initOffense();
         }
 
         //------------------------------------------------------------------------------

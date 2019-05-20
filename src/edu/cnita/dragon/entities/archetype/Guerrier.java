@@ -39,7 +39,7 @@ public class Guerrier extends Entity {
 
     //setters
     @Override
-    public void setOffense(){
+    public void initOffense(){
         this.arme = this.getListOffense().get(generateRandom(0,this.getListOffense().size()-1));
     }
     @Override
@@ -76,7 +76,7 @@ public class Guerrier extends Entity {
     public Guerrier(String name, int minHealth, int maxHealth, int minStrength, int maxStrength,TypeEntity type){
         super(name,minHealth,maxHealth,minStrength,maxStrength,type);
         this.setListOffense(createListWeapon());
-        this.setOffense();
+        this.initOffense();
         this.setDefense("Bouclier En Bois");
 
     }

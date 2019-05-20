@@ -36,7 +36,7 @@ public class Magicien extends Entity {
         return this.ListOffense;
     }
     //setters
-    public void setOffense(){
+    public void initOffense(){
         this.sort = this.getListOffense().get(generateRandom(0,this.getListOffense().size()-1));
     }
     public void setDefense(String philtre){
@@ -50,10 +50,8 @@ public class Magicien extends Entity {
     public Magicien(String name,int minHealth,int maxHealth,int minStrength,int maxStrength,TypeEntity type){
         super(name,minHealth,maxHealth,minStrength,maxStrength,type);
         this.ListOffense =  createListSort();
-        this.setOffense();
+        this.initOffense();
         this.setDefense("Barrière Spirituelle");
-
-
     }
 
     // Methods

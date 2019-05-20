@@ -40,7 +40,7 @@ public abstract class Entity {
         Strength = strength;
     }
     public abstract void setDefense(String defense);
-    public abstract void setOffense();
+    public abstract void initOffense();
 
     /**
      * Constructor
