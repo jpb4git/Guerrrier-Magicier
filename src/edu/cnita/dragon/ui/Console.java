@@ -1,143 +1,134 @@
 package edu.cnita.dragon.ui;
 
+import edu.cnita.dragon.EnumArchetype.EnumActionMenu;
 import edu.cnita.dragon.EnumArchetype.TypeEntity;
 import edu.cnita.dragon.entities.Entity;
 import edu.cnita.dragon.entities.archetype.Guerrier;
 import edu.cnita.dragon.entities.archetype.Magicien;
 import edu.cnita.dragon.game.Game;
 
+import java.lang.reflect.Array;
 import java.util.List;
 import java.util.Scanner;
 public class Console implements UI{
 
 
     //Attributs
-    private List<Entity> entities;
+    private Entity[] entities;
+    private Scanner  sc;
     //getters
-    public List<Entity> getEntities() {
+    public Entity[] getEntities() {
         return entities;
     }
-
+    public Scanner getSc() { return sc; }
     // Constructor
-    public Console(List<Entity> entities){
-        this.entities = entities;
+    public Console(Entity[] entities){
+        this.entities =  entities;
+        this.sc = new Scanner(System.in);
     }
-    //methods
-    public void showMenu(){
-        //clearScreen();
-        Scanner sc = new Scanner(System.in);
+
+    /**
+     * Affichage menu Principal
+     */
+    public void showMenuHeader(){
+
         System.out.println("_______________________________________________________________________________________________________________" );
-        System.out.println("Ajouter une Entité :: 1 | Liste Entités :: 2 | éditer une Entité :: 3 | Supprimer une entité :: 4 | Quitter :: 5" );
+        System.out.println("Ajouter une Entité :: "+ EnumActionMenu.CREATE_ENTITY.getValue() +
+                           " | Liste Entités :: "+EnumActionMenu.LISTE_ENTITIES.getValue()+
+                           " | éditer une Entité :: "+EnumActionMenu.EDIT_ENTITY.getValue()+
+                           " | Supprimer une entité :: "+EnumActionMenu.DELETE_ENTITY.getValue() +
+                           " | Quitter :: "+ EnumActionMenu.EXIT_GLOBAL.getValue() + " |" );
         System.out.println("_______________________________________________________________________________________________________________" );
-        String str = sc.nextLine();
 
-        while(Integer.parseInt(str) != 5){
-
-            switch (Integer.parseInt(str)){
-                case 1:
-                    AddEntity();
-                    break;
-                case 2:
-                    listeEntity();
-                    break;
-                case 3:
-                    // sub menu edition ENtity
-                   editEntity();
-                    break;
-                case 4:
-                     deleteEntity();
-                    break;
-                default:
-
-            }
-           // clearScreen();
-            System.out.println("_______________________________________________________________________________________________________________" );
-            System.out.println("Ajouter une Entité :: 1 | Liste Entités :: 2 | éditer une Entité :: 3 | Supprimer une entité :: 4 | Quitter :: 5" );
-            System.out.println("_______________________________________________________________________________________________________________" );
-            str = sc.nextLine();
-        }
-        sc.close();// memory ....
     }
-    public void listeEntity(){
+    public void showMenuEditHeader(){
 
-        for (Entity hero: this.getEntities()) {
+        System.out.println("_______________________________________________________________________________________________________________" );
+        System.out.println("_______________________________________________________________________________________________________________");
+        System.out.println(" EDITION  ");
+        System.out.println("_______________________________________________________________________________________________________________" );
+        System.out.println("_______________________________________________________________________________________________________________" );
+
+
+
+    }
+    public void showMenuDeleteHeader(){
+        System.out.println("_______________________________________________________________________________________________________________" );
+        System.out.println("_______________________________________________________________________________________________________________");
+        System.out.println(" DELETE  ");
+        System.out.println("_______________________________________________________________________________________________________________" );
+        System.out.println("_______________________________________________________________________________________________________________" );
+    }
+    /**
+     * ask for user choice
+     * @return int user choice
+     */
+    public int showMenu(){
+        showMenuHeader();
+        String str = this.getSc().nextLine();
+        //this.getSc().close();// memory ....
+        return  Integer.parseInt(str);
+    }
+    /**
+     *
+     * @param type              enum archétype de l'entité
+     * @param nom               String nom de l'entité
+     * @param health            int niveau de vie de l'entité
+     * @param strength          int niveau de force de l'entité
+     * @param offense           String nom de [ l'arme / sort ] de l'entité
+     * @param strengthOffense   int force de [ l'arme / sort ] de l'entité
+     * @param defense           String nom de la defense
+     */
+    public void showEntity(String type,String nom,int health,int strength,String offense,int strengthOffense, String defense){
+
             System.out.println("____________________________");
-            System.out.println("|---------- " +hero.getType().toString() + " -------");
-            System.out.println("|Name : " + hero.getNom());
-            System.out.println("|Health : " + hero.getHealth());
-            System.out.println("|Strength : " + hero.getStrength());
+            System.out.println("|---------- " +type + " -------");
+            System.out.println("|Name : " + nom);
+            System.out.println("|Health : " + health);
+            System.out.println("|Strength : " + strength);
             System.out.println("|----------------------------");
-            System.out.println("|Weapon : " + hero.getOffense().getNom());
-            System.out.println("|Strength Weapon : " + hero.getOffense().getStrength());
+            System.out.println("|Weapon : " + offense);
+            System.out.println("|Strength Weapon : " + strengthOffense);
             System.out.println("|----------------------------");
-            System.out.println("|Defensif : " + hero.getDefense());
-            System.out.println("____________________________");
-        }
+            System.out.println("|Defensif : " + defense);
+
     }
     public Entity createEntity(){
-        clearScreen();
-        String name;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Choisissez un Nom pour votre personnage  : " );
-        name = sc.nextLine();
-        System.out.println(" L'archétype  de votre personnage :: 1 pour " + TypeEntity.GUERRIER + "  |  2 pour  " + TypeEntity.MAGICIEN + " ? :");
-        String str = sc.nextLine();
 
+        String name;
+        System.out.println("Choisissez un Nom pour votre personnage  : " );
+        name = this.getSc().nextLine();
+        System.out.println(" L'archétype  de votre personnage :: 1 pour " + TypeEntity.GUERRIER + "  |  2 pour  " + TypeEntity.MAGICIEN + " ? :");
+        String str = this.getSc().nextLine();
         if (Integer.parseInt(str) == 1 ){
             System.out.println("Vous avez choisi : " + TypeEntity.GUERRIER.toString());
-
-
             return new Guerrier(name , TypeEntity.GUERRIER);
-
         }else{
             System.out.println("Vous avez choisi : " + TypeEntity.MAGICIEN);
             return  new Magicien(name ,TypeEntity.MAGICIEN);
         }
     }
-    public void editEntity(){
-        int i = 0;
-        String str;
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("__________");
-        System.out.println("EDITION   ");
-        System.out.println("__________");
-
-        for (Entity hero: this.getEntities()) {
-            System.out.print( hero.getNom() + " Tapez " + i + "  |  ");
-            i++;
+    public int showEditMenuEntity(String[] action){
+        showMenuEditHeader();
+        String output=" ";
+        for (int i = 0 ; i < action.length;i++) {
+            output += action[i];
         }
-        System.out.println("Quittez le mode édition :: q ");
-        str = sc.nextLine();
-
-        while (!str.equals("q")){
-            clearScreen();
-
-            // formulaire edition avec index
-            formulaireEntity(this.getEntities().get(Integer.parseInt(str)));
-
-
-            i = 0;
-            System.out.println("__________");
-            System.out.println("EDITION   ");
-            System.out.println("__________");
-            for (Entity hero: this.getEntities()) {
-                System.out.print( hero.getNom() + " Tapez " + i + "  |  ");
-                i++;
-            }
-            System.out.println("Quittez le mode édition :: q ");
-            str = sc.nextLine();
-
-        }
-
-
+        System.out.println(output);
+        return  Integer.parseInt(this.getSc().nextLine());
     }
-    public void formulaireEntity(Entity entity){
-
+    public int showDeleteMenuEntity(String[] action){
+        showMenuDeleteHeader();
+        String output=" ";
+        for (int i = 0 ; i < action.length;i++) {
+            output += action[i];
+        }
+        System.out.println(output);
+        return  Integer.parseInt(this.getSc().nextLine());
+    }
+    public Entity formEntity(Entity entity){
         Scanner sc = new Scanner(System.in);
         String str;
-       // TypeEntity type =  entity.getType();
-
         System.out.println(entity.getNom() + " | Health:" + entity.getHealth()+ " | Strength:" + entity.getStrength()+ " | Defense :" + entity.getDefense() + " | Offense :"+ entity.getOffense().getNom());
         System.out.println("EDITION ][ Nom Entity  : " );
         str = sc.nextLine();
@@ -146,7 +137,7 @@ public class Console implements UI{
         }
 
 
-        System.out.println("EDITION ][ Nom Bouclier  : " );
+        System.out.println("EDITION ][ Nom "+entity.getType().defense +"  : " );
         str = sc.nextLine();
         if (!str.equals("")) {
             entity.setDefense(str);
@@ -175,44 +166,7 @@ public class Console implements UI{
         System.out.println("Modification récapitulatif :");
         System.out.println(entity.getNom() + " | Health:" + entity.getHealth()+ " | Strength:" + entity.getStrength()+ " | Defense :" + entity.getDefense() + " | Offense :"+ entity.getOffense().getNom());
 
-    }
-    public void deleteEntity(){
-        int i = 0;
-        String str;
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("__________");
-        System.out.println("DELETE    ");
-        System.out.println("__________");
-
-        for (Entity hero: this.getEntities()) {
-            System.out.print( hero.getNom() + " Tapez " + i + "  |  ");
-            i++;
-        }
-        System.out.println("Quittez le mode Delete :: q ");
-        str = sc.nextLine();
-
-        while (!str.equals("q")){
-            clearScreen();
-
-            //delete Entity
-            this.getEntities().remove(Integer.parseInt(str));
-            i = 0;
-            System.out.println("__________");
-            System.out.println("DELETE    ");
-            System.out.println("__________");
-            for (Entity hero: this.getEntities()) {
-                System.out.print( hero.getNom() + " Tapez " + i + "  |  ");
-                i++;
-            }
-            System.out.println("Quittez le mode Delete :: q ");
-            str = sc.nextLine();
-
-        }
-    }
-    public void AddEntity(){
-        Entity NewEntity = createEntity();
-        this.getEntities().add(NewEntity);
+        return entity;
     }
     private static void clearScreen() {
 
