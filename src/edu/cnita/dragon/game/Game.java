@@ -9,22 +9,23 @@ public class Game {
     Console console;
     List<Entity> entities;
 
-
-    /**  Constructor  */
-    public Game (){
-         this.entities = new ArrayList<>();
-         this.console = new Console(this);
-    }
-
-    /**
-     * method static  playGame
-     */
-    public static void playGame(){
-        Game game = new Game();
-        game.console.showMenu();
-    }
     // Getters
     public List<Entity> getEntities() {
         return entities;
     }
+    public Console getConsole() {
+        return console;
+    }
+
+    /**  Constructor  */
+    public Game (){
+         this.entities = new ArrayList<>();
+         this.console = new Console(this.getEntities());
+    }
+
+
+    public void playGame(){
+        this.getConsole().showMenu();
+    }
+
 }

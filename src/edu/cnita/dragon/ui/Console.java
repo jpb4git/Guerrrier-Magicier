@@ -6,15 +6,23 @@ import edu.cnita.dragon.entities.archetype.Guerrier;
 import edu.cnita.dragon.entities.archetype.Magicien;
 import edu.cnita.dragon.game.Game;
 
+import java.util.List;
 import java.util.Scanner;
 public class Console implements UI{
 
-    private Game game;
+
+    //Attributs
+    private List<Entity> entities;
+    //getters
+    public List<Entity> getEntities() {
+        return entities;
+    }
 
     // Constructor
-    public Console(Game game){
-        this.game = game;
+    public Console(List<Entity> entities){
+        this.entities = entities;
     }
+    //methods
     public void showMenu(){
         //clearScreen();
         Scanner sc = new Scanner(System.in);
@@ -52,7 +60,7 @@ public class Console implements UI{
     }
     public void listeEntity(){
 
-        for (Entity hero: this.game.getEntities()) {
+        for (Entity hero: this.getEntities()) {
             System.out.println("____________________________");
             System.out.println("|---------- " +hero.getType().toString() + " -------");
             System.out.println("|Name : " + hero.getNom());
@@ -79,15 +87,11 @@ public class Console implements UI{
             System.out.println("Vous avez choisi : " + TypeEntity.GUERRIER.toString());
 
 
-            return new Guerrier(name ,TypeEntity.GUERRIER.minHealth,
-                                      TypeEntity.GUERRIER.maxHealth,
-                                      TypeEntity.GUERRIER.minStrength,
-                                      TypeEntity.GUERRIER.maxStrength,
-                                      TypeEntity.GUERRIER);
+            return new Guerrier(name , TypeEntity.GUERRIER);
 
         }else{
             System.out.println("Vous avez choisi : " + TypeEntity.MAGICIEN);
-            return  new Magicien(name ,TypeEntity.MAGICIEN.minHealth,TypeEntity.MAGICIEN.maxHealth,TypeEntity.MAGICIEN.minStrength,TypeEntity.MAGICIEN.maxStrength,TypeEntity.MAGICIEN);
+            return  new Magicien(name ,TypeEntity.MAGICIEN);
         }
     }
     public void editEntity(){
@@ -99,7 +103,7 @@ public class Console implements UI{
         System.out.println("EDITION   ");
         System.out.println("__________");
 
-        for (Entity hero: game.getEntities()) {
+        for (Entity hero: this.getEntities()) {
             System.out.print( hero.getNom() + " Tapez " + i + "  |  ");
             i++;
         }
@@ -110,14 +114,14 @@ public class Console implements UI{
             clearScreen();
 
             // formulaire edition avec index
-            formulaireEntity(this.game.getEntities().get(Integer.parseInt(str)));
+            formulaireEntity(this.getEntities().get(Integer.parseInt(str)));
 
 
             i = 0;
             System.out.println("__________");
             System.out.println("EDITION   ");
             System.out.println("__________");
-            for (Entity hero: game.getEntities()) {
+            for (Entity hero: this.getEntities()) {
                 System.out.print( hero.getNom() + " Tapez " + i + "  |  ");
                 i++;
             }
@@ -181,7 +185,7 @@ public class Console implements UI{
         System.out.println("DELETE    ");
         System.out.println("__________");
 
-        for (Entity hero: this.game.getEntities()) {
+        for (Entity hero: this.getEntities()) {
             System.out.print( hero.getNom() + " Tapez " + i + "  |  ");
             i++;
         }
@@ -192,14 +196,12 @@ public class Console implements UI{
             clearScreen();
 
             //delete Entity
-            this.game.getEntities().remove(Integer.parseInt(str));
-
-
+            this.getEntities().remove(Integer.parseInt(str));
             i = 0;
             System.out.println("__________");
             System.out.println("DELETE    ");
             System.out.println("__________");
-            for (Entity hero: game.getEntities()) {
+            for (Entity hero: this.getEntities()) {
                 System.out.print( hero.getNom() + " Tapez " + i + "  |  ");
                 i++;
             }
@@ -207,15 +209,10 @@ public class Console implements UI{
             str = sc.nextLine();
 
         }
-
-
-
-
-
     }
     public void AddEntity(){
         Entity NewEntity = createEntity();
-        this.game.getEntities().add(NewEntity);
+        this.getEntities().add(NewEntity);
     }
     private static void clearScreen() {
 

@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Guerrier extends Entity {
 
-    private Obj arme;
+    private Obj activeWeapon;
     private List<Obj> ListOffense = new ArrayList<>();
     private String bouclier;
 
@@ -19,15 +19,15 @@ public class Guerrier extends Entity {
     public String getBouclier() {
         return bouclier;
     }
-    public Obj getArme() {
-        return arme;
+    public Obj getActiveWeapon() {
+        return activeWeapon;
     }
     public List<Obj> getListOffense() {
         return ListOffense;
     }
     @Override
     public Obj getOffense() {
-        return this.getArme();
+        return this.getActiveWeapon();
     }
     @Override
     public String getDefense() {
@@ -40,7 +40,7 @@ public class Guerrier extends Entity {
     //setters
     @Override
     public void initOffense(){
-        this.arme = this.getListOffense().get(generateRandom(0,this.getListOffense().size()-1));
+        this.activeWeapon = this.getListOffense().get(generateRandom(0,this.getListOffense().size()-1));
     }
     @Override
     public void setDefense(String defense) {
@@ -68,13 +68,10 @@ public class Guerrier extends Entity {
      *
      *
      * @param name name String format
-     * @param minHealth minimum health a Guerrier can have
-     * @param maxHealth maximum health a Guerrier can have
-     * @param minStrength minimum strenth a guerier can have
-     * @param maxStrength maximum strenth a guerier can have
+     * @param type archétype for this guerrier
      */
-    public Guerrier(String name, int minHealth, int maxHealth, int minStrength, int maxStrength,TypeEntity type){
-        super(name,minHealth,maxHealth,minStrength,maxStrength,type);
+    public Guerrier(String name, TypeEntity type){
+        super(name,type);
         this.setListOffense(createListWeapon());
         this.initOffense();
         this.setDefense("Bouclier En Bois");

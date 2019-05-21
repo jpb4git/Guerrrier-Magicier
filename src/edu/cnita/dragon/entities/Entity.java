@@ -48,19 +48,15 @@ public abstract class Entity {
     public Entity(){
 
     }
-    public Entity(String nom, int minHealth, int maxHealth, int minStrength, int maxStrength,TypeEntity type){
-        Nom = nom;
-
-        Health = generateRandom(minHealth,maxHealth);
-        Strength = generateRandom(minStrength,maxStrength);
+    public Entity(String nom, TypeEntity type){
+        this.Nom = nom;
         this.type = type;
-
+        Health = generateRandom(this.getType().minHealth,this.getType().maxHealth);
+        Strength = generateRandom(this.getType().minStrength,this.getType().maxStrength);
     }
     public int generateRandom(int min, int max){
         return min + (int)(Math.random() * ((max - min) + 1));
     }
-
-
 
 
 }
